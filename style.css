@@ -187,3 +187,31 @@ ul{
     padding: 10px;
     list-style: none;
 }
+ul.boy .align-right{
+  text-align: left;
+}
+ul.boy .float-right{
+  float: left
+}
+ul.boy  .g{
+  text-align: right;
+}
+ul.boy  .my-message{
+float: right;
+}
+.chat-history ul.boy .my-message::after{
+  left: 92%;
+}
+.chat .chat-history ul.boy .other-message:after {
+  left: 7%;
+}
+@media (max-width:450px){
+  .c{
+    width: 95%;
+  }
+}
+@media (max-width:650px){
+  .c{
+    width: 80%;
+  }
+}

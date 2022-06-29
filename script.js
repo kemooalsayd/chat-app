@@ -14,11 +14,12 @@ bar.onclick=()=>{
 }
 o= new Date()
 time=o.getHours()+":"+o.getMinutes()
-
-
 send.onclick=(e)=>{
   e.preventDefault()
   
+
+ 
+    
 
 
  if(inp.value.trim()!=""){
@@ -26,7 +27,8 @@ send.onclick=(e)=>{
 left=`
 <li>
 <div class="message-data align-right">
-  <span class="message-data-time" >${time},Today</span> &nbsp; &nbsp;
+
+  <span  class="message-data-time" >${time},Today</span> &nbsp; &nbsp;
   <span class="message-data-name" >kareem</span>
 </div>
 <div class="message other-message float-right">
@@ -47,8 +49,13 @@ inp.value=""
  }
 }
 mo.onclick=()=>{
-  
+  tit.innerText="mohamed"
+  inp.value=""
+  chat.classList.add("boy")
+  document.documentElement.style.setProperty("--my","#80cf61")
+  document.documentElement.style.setProperty("--mu","#7bb6ed")
 function previewImage() {
+  
   var file = document.getElementById("file").files;
   if (file.length > 0) {
       var fileReader = new FileReader();
@@ -57,7 +64,7 @@ function previewImage() {
           img=`
          
 <li>
-<div class="message-data">
+<div class="message-data g">
   <span class="message-data-name">mohamed</span>
   <span class="message-data-time">${time},Today</span>
 </div>
@@ -73,14 +80,14 @@ ${lo}
     file.onchange=()=>{
       previewImage()
     }
-  tit.innerText="mohamed"
+  
 send.onclick=(e)=>{
   e.preventDefault()
  if(inp.value.trim()!=""){
   masg=inp.value;
 right=`
 <li>
-      <div class="message-data">
+      <div class="message-data g">
         <span class="message-data-name">mohamed</span>
         <span class="message-data-time">${time},Today</span>
       </div>
@@ -100,6 +107,10 @@ inp.value=""
 }
 ka.onclick=()=>{
   tit.innerText="kareem"
+  inp.value=""
+  chat.classList.remove("boy")
+  document.documentElement.style.setProperty("--my","#7bb6ed")
+  document.documentElement.style.setProperty("--mu","#80cf61")
   file.onchange=()=>{
     previewImage()
   }
@@ -148,3 +159,4 @@ ka.onclick=()=>{
         };
         fileReader.readAsDataURL(file[0]);
       }}
+     
