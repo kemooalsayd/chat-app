@@ -50,7 +50,13 @@
                       </div>
                     <form>
                         <input id="input" type="text">
-                        <input type="file" name="file" id="file" accept="image/*" onchange="previewImage()">
+                        <button id="btn">
+                         <main> <i class="fas fa-file-upload"></i></main>
+                          <div><span id="video-t"><i class="fas fa-video"></i></span> <span id="img-t"><i class="fas fa-image"></i></span></div>
+                         
+                        </button>
+                       <section> <input type="file" name="img" id="img" accept="image/*" onchange=" previewImage()">
+                        <input type="file" name="vedio" id="video" accept="video/*" onchange=" previewVideo()"></section>
                         <input id="send" type="submit" value="send">
                     </form>
                 </div>

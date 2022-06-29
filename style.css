@@ -15,11 +15,12 @@
 .c{
     width: 60%;
     margin: 3px auto;
+    overflow: hidden;
 }
 .v{
     border: var(--v) solid 2px;
 }
-.chat img{
+.chat img,video,embed{
   display: block;
   width: 80%;
   margin: auto;
@@ -79,12 +80,10 @@ h4{
     background-color: var(--v);
     text-align: center;
     color: var(--p);
-}
-form input{
-  width: 40%;
+    display: flex;
 }
 form #input{
-    width: 100%;
+    width: 78%;
     border: none;
     outline: none;
     margin-bottom: 3px;
@@ -94,7 +93,7 @@ form #input{
   width: 50%;
 }
 form #send{
-    width: 58%;
+    width: 15%;
     border: none;
     outline: none;
     padding: 3px;
@@ -104,6 +103,10 @@ form #send{
 form #send:hover{
     background-color: var(--v);
     color: var(--p);
+}
+button:hover{
+  background-color: var(--p);
+  color: var(--v);
 }
 
 
@@ -207,11 +210,38 @@ float: right;
 }
 @media (max-width:450px){
   .c{
-    width: 95%;
+    width: 98%;
   }
 }
 @media (max-width:650px){
   .c{
     width: 80%;
   }
+}
+button{
+background: var(--v);
+border-radius: 50%;
+width: 40px;
+height: 40px;
+line-height: 40px;
+transition: 1s;
+border: none;
+outline: none;
+color: var(--p);
+font-size: 20px;
+position: relative;
+margin: 0 5px;
+}
+button div{
+  position: absolute;
+  color: var(--v);
+  top: -82px;
+  display: none;
+  transition: 1s;
+}
+section input{
+  display: none;
+}
+button:hover div{
+  display: block;
 }
