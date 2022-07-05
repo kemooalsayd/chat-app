@@ -245,3 +245,7 @@ section input{
 button:hover div{
   display: block;
 }
+button div i{
+  padding: 5px 0 12px;
+}
+
